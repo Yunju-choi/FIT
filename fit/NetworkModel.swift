@@ -9,7 +9,7 @@
 class NetworkModel {
     
     //aws EC2 인스턴스의 주소
-    internal let baseURL = "http://52.205.252.157:3000"
+    internal let baseURL = 
     
     var view: NetworkCallback
     
