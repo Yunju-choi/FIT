@@ -13,8 +13,8 @@ class SaveTopCVC : UIViewController, UICollectionViewDataSource, UICollectionVie
     @IBOutlet var collectionView: UICollectionView!
     
     
-    let labelDate = ["1","2","3","4", "5", "6"]
-    let labelName = ["윤","주","야","힘","내", "하트"]
+    let labelDate = ["2017.1.6","2017.1.6","2017.1.6","2017.1.6", "2017.1.6", "2017.1.6"]
+    let labelName = ["66걸즈, 청바지","믹스앤믹스, 니트","멀티팝, 무지맨투맨","플레이어, 나이키티셔츠","프롬비기닝, 원피스", "신화, 짱"]
     let imageArray = [UIImage(named: "color1"),UIImage(named: "color2"),UIImage(named: "color3"),UIImage(named: "color4"), UIImage(named: "color5"), UIImage(named: "color6")]
     
     override func viewDidLoad() {
@@ -38,25 +38,19 @@ class SaveTopCVC : UIViewController, UICollectionViewDataSource, UICollectionVie
         return cell
     }
     
-    /*
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showImage", sender: self)
+        //self.performSegue(withIdentifier: "showDatail", sender: self)
+        let svc = storyboard?.instantiateViewController(withIdentifier: "SaveDetailVC") as! SaveDetailVC
+        navigationController?.pushViewController(svc, animated: true)
     }
-    */
     
     /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showImage"{
-            let indexPaths = self.collectionView!.indexPathsForSelectedItems!
-            let indexPath = indexPaths[0] as NSIndexPath
-            
-            let vc = segue.destination as! CollectionDescVC
-            
-            vc.image = self.imageArray[indexPath.row]!
-            vc.title = self.items[indexPath.row]
-            
-            
-        }
+        let svc = storyboard?.instantiateViewController(withIdentifier: "SaveDetailVC") as! SaveDetailVC
+        navigationController?.pushViewController(svc, animated: true)
     }
     */
+    
+    
 }

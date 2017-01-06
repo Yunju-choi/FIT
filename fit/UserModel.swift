@@ -34,13 +34,10 @@ class UserModel: NetworkModel {
                     let data = JSON(value)
                     print(data)
                     let result = self.gino(data["result"].int)
-                    //let pokemon = self.gino(data["id"].int) // 서버에서 만들어준 id를 뿌림
-                    //let tuple = (result, pokemon)
-                    //self.view.networkResult(resultData: tuple, code: 0) // 매칭되는 경우 1, 매칭안되면 0값이 모내진다.
                     
                     self.ud.set(id, forKey: "user_id")
                     self.ud.synchronize()
-                    self.view.networkResult(resultData: result, code: 0)
+                    self.view.networkResult(resultData: result, code: UserModel.CODE_LOGIN)
                 }
             case .failure(let err) :
                 print(err)
@@ -59,7 +56,7 @@ class UserModel: NetworkModel {
             (response: HTTPURLResponse?, result: GraphRequestResult<UserDataRequest>) in
             switch result {
             case .success(let graphResponse) :
-                self.view.networkResult(resultData: graphResponse, code: UserModel.CODE_FB_CB)
+                self.signUp(id: graphResponse.id, nickname: graphResponse.name, pw: "", mail: graphResponse.email, check: 2)
             case .failed(let err) :
                 print(err)
                 self.view.networkFailed()
@@ -123,7 +120,13 @@ class UserModel: NetworkModel {
         Alamofire.request("\(baseURL)/sign/up", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { res in
             switch res.result {
             case .success :
-                self.view.networkResult(resultData: "", code: 0)
+                if let value = res.result.value {
+                    let data = JSON(value)
+                    print(data)
+                    let result = self.gsno(data["result"].string)
+                    self.view.networkResult(resultData: result, code: 0)
+                }
+                
                 break
             case .failure(let err) :
                 print(err)
@@ -132,4 +135,54 @@ class UserModel: NetworkModel {
         }
         
     }
+    
+    // id 중복체크
+    func checkID (id: String){
+
+        let params = ["id" : id]
+        
+        Alamofire.request("\(baseURL)/sign/idcheck", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { res in
+            switch res.result {
+            case .success :
+                if let value = res.result.value {
+                    let data = JSON(value)
+                    let result = data["result"]
+                    self.view.networkResult(resultData: result, code: 1)
+
+                    print(data)
+                }
+                break
+            case .failure(let err) :
+                print(err)
+                self.view.networkFailed()
+            }
+        }
+ 
+    }
+ 
+    
+    // 닉네임 중복체크
+    func checkNickname (nickname : String){
+        
+        let params = ["nickname" : nickname] as [String : Any]
+
+        Alamofire.request("\(baseURL)/sign/nickcheck", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { res in
+            switch res.result {
+            case .success :
+                if let value = res.result.value {
+                    let data = JSON(value)
+                    let result = data["result"]
+                    self.view.networkResult(resultData: result, code: 2)
+                    
+                    print(data)
+                }
+                break
+            case .failure(let err) :
+                print(err)
+                self.view.networkFailed()
+            }
+            
+        }
+    }
+    
 }

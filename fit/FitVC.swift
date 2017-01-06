@@ -18,12 +18,6 @@ class FitVC : UIViewController {
     @IBOutlet var myArm: UILabel!
     @IBOutlet var myShoulder: UILabel!
     
-    @IBOutlet var clothTop: UITextField!
-    @IBOutlet var clothBottom: UITextField!
-    @IBOutlet var clothHeight: UITextField!
-    @IBOutlet var clothArm: UITextField!
-    @IBOutlet var clothShoulder: UITextField!
-    
     @IBOutlet var clothStackView: UIStackView!
     
     // 포토 갤러리로 넘어가는거 구현
@@ -32,41 +26,68 @@ class FitVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setKeyboardSetting()
-        let userDefault = UserDefaults.standard
-        myTop.text = userDefault.string(forKey: "myTopData")
-        myBottom.text = userDefault.string(forKey: "myBottomData")
-        myHeight.text = userDefault.string(forKey: "myTotalData")
-        myArm.text = userDefault.string(forKey: "myArmData")
-        myShoulder.text = userDefault.string(forKey: "myShoulderData")
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        loadSizeData()
         
         picker.allowsEditing = true // true로 바꾸면 이미지 크롭 가능
         picker.delegate = self // 딜리게이트구현. 지금처럼 하지 말고 extension 이용해서 딜리게이트 상속받기
         
+        
         for view in clothStackView.arrangedSubviews {
             if view.subviews.count > 0 {
-                print(view.subviews)
                 if let tf = view.subviews[0] as? UITextField {
                     tf.delegate = self
                 }
             }
-            
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadSizeData()
     }
     
     @IBAction func selectPhotoTap(_ sender: AnyObject) {
         present(picker, animated: true)
     }
     
+    func loadSizeData () {
+        let userDefault = UserDefaults.standard
+        myTop.text = userDefault.string(forKey: "myTopData")
+        myBottom.text = userDefault.string(forKey: "myBottomData")
+        myHeight.text = userDefault.string(forKey: "myTotalData")
+        myArm.text = userDefault.string(forKey: "myArmData")
+        myShoulder.text = userDefault.string(forKey: "myShoulderData")
+    }
    
     @IBAction func nextView(_ sender: AnyObject) {
+        let ud = UserDefaults.standard
+        
+        for view in clothStackView.arrangedSubviews {
+            if view.subviews.count > 0 {
+                if let tf = view.subviews[0] as? UITextField {
+                    switch tf.tag {
+                    case 0:
+                        ud.set(tf.text, forKey: "clothTopData")
+                    case 1:
+                        ud.set(tf.text, forKey: "clothBottomData")
+                    case 2:
+                        ud.set(tf.text, forKey: "clothTotalData")
+                    case 3:
+                        ud.set(tf.text, forKey: "clothArmData")
+                    case 4:
+                        ud.set(tf.text, forKey: "clothShoulderData")
+                    default:
+                        break
+                    }
+                }
+            }
+        }
+        
+        //ud.set(imgClothDetail., forKey: "imgClothDetail")
+        
         if let vc = storyboard?.instantiateViewController(withIdentifier: "SelectClothVC") as? SelectClothVC {
-//            let userDefault = UserDefaults.standard
-//            userDefault.set(clothTop.text, forKey: "clothTopData")
-//            userDefault.set(clothBottom.text, forKey: "clothBottomData")
-//            userDefault.set(myTotal.text, forKey: "myTotalData")
-//            userDefault.set(clothArm.text, forKey: "clothArmData")
-//            userDefault.set(clothShoulder.text, forKey: "clothShoulderData")
-            
             navigationController?.pushViewController(vc, animated: true)
         }
     }

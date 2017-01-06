@@ -68,6 +68,8 @@ class SaveFitVC: UIViewController, UIPageViewControllerDataSource, UIPageViewCon
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+
         self.menuScrollView = UIScrollView()
         self.menuScrollView.delegate = self
         self.view.addSubview(self.menuScrollView)

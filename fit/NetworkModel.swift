@@ -32,4 +32,20 @@ class NetworkModel {
             return 0
         }
     }
+    
+    func gfno(_ value: Float?) -> Float {
+        if let value_ = value {
+            return value_
+        } else {
+            return 0
+        }
+    }
+    
+    func gdno(_ value: Double?) -> Double {
+        if let value_ = value {
+            return value_
+        } else {
+            return 0
+        }
+    }
 }

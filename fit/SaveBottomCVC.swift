@@ -16,8 +16,8 @@ class SaveBottomCVC : UIViewController, UICollectionViewDataSource, UICollection
     
     //let imageArray = [UIImage(named: "snowflake1"),UIImage(named: "snowflake2"),UIImage(named: "snowflake3"),UIImage(named: "snowflake4")]
     
-    let labelDate = ["11","12","13","14", "15", "16"]
-    let labelName = ["윤","주","야","힘","내", "하트"]
+    let labelDate = ["2017.1.6","2017.1.6","2017.1.6","2017.1.6", "2017.1.6", "2017.1.6"]
+    let labelName = ["윤주야","힘내","하트","하트","힘내", "윤주야"]
     let imageArray = [UIImage(named: "color1"),UIImage(named: "color2"),UIImage(named: "color3"),UIImage(named: "color4"), UIImage(named: "color5"), UIImage(named: "color6")]
     
     override func viewDidLoad() {

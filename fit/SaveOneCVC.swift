@@ -16,8 +16,8 @@ class SaveOneCVC : UIViewController, UICollectionViewDataSource, UICollectionVie
     
     //let imageArray = [UIImage(named: "snowflake1"),UIImage(named: "snowflake2"),UIImage(named: "snowflake3"),UIImage(named: "snowflake4")]
     
-    let labelDate = ["21","22","23","24", "25", "26"]
-    let labelName = ["윤","주","야","힘","내", "하트"]
+    let labelDate = ["2017.1.6","2017.1.6","2017.1.6","2017.1.6", "2017.1.6", "2017.1.6"]
+    let labelName = ["수민아","수고했어","강남탐탐","너무싫다","신화만세", "신화짱장"]
     let imageArray = [UIImage(named: "color1"),UIImage(named: "color2"),UIImage(named: "color3"),UIImage(named: "color4"), UIImage(named: "color5"), UIImage(named: "color6")]
     
     override func viewDidLoad() {

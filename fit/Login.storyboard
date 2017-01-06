@@ -34,12 +34,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EY-CQ-FLA">
-                                <frame key="frameInset" minX="80" minY="540" width="215" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EY-CQ-FLA">
+                                <frame key="frameInset" minX="26" minY="535" width="324" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="로그인"/>
+                                <state key="normal" image="loginButton"/>
                                 <connections>
                                     <action selector="btnLogin:" destination="6x4-ou-fxN" eventType="touchUpInside" id="U7x-ZE-iyr"/>
                                 </connections>
@@ -47,7 +47,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41K-UH-2Nr">
                                 <frame key="frameInset" minX="243" minY="479" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="회원가입"/>
+                                <state key="normal" title="회원가입">
+                                    <color key="titleColor" red="0.96345049140000005" green="0.6333708763" blue="0.64245933290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="btnJoin:" destination="6x4-ou-fxN" eventType="touchUpInside" id="PpC-ao-Ckc"/>
                                 </connections>
@@ -59,26 +61,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8M-xn-9pK">
-                                <frame key="frameInset" minX="127" minY="578" width="121" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="페이스북으로 로그인"/>
-                                <connections>
-                                    <action selector="btnFacebook:" destination="6x4-ou-fxN" eventType="touchUpInside" id="yMd-DQ-1gJ"/>
-                                </connections>
-                            </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9Jj-P8-s4Y">
                                 <frame key="frameInset" minX="178" minY="323" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgc-ae-yh7">
-                                <frame key="frameInset" minX="281" minY="617" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="공유하기"/>
-                                <connections>
-                                    <action selector="kakaoShare:" destination="6x4-ou-fxN" eventType="touchUpInside" id="LV9-ge-qJZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -124,39 +110,34 @@
                                 <frame key="frameInset" minX="46" minY="412" width="284" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qc-ZM-2Qn">
-                                <frame key="frameInset" minX="173" minY="528" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qc-ZM-2Qn">
+                                <frame key="frameInset" minX="31" minY="521" width="315" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="완료"/>
+                                <state key="normal" image="completeButton"/>
                                 <connections>
                                     <action selector="btnCompleteJoin:" destination="2CY-Iz-NXj" eventType="touchUpInside" id="73l-jI-eiP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHY-Fo-pKB">
-                                <frame key="frameInset" minX="313" minY="213" width="52" height="30"/>
+                                <frame key="frameInset" minX="276" minY="214" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="중복확인"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="중복확인">
+                                    <color key="titleColor" red="0.96345049140000005" green="0.6333708763" blue="0.64245933290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="checkID:" destination="2CY-Iz-NXj" eventType="touchUpInside" id="d1d-hS-eQi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoP-w6-kY6">
-                                <frame key="frameInset" minX="313" minY="269" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="중복확인"/>
-                                <connections>
-                                    <action selector="checkNickname:" destination="2CY-Iz-NXj" eventType="touchUpInside" id="3zl-eY-wSv"/>
+                                    <action selector="checkID:" destination="2CY-Iz-NXj" eventType="touchUpInside" id="7WH-NX-hTz"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkL-V1-T48">
-                                <frame key="frameInset" minX="105" minY="214" width="200" height="30"/>
+                                <frame key="frameInset" minX="105" minY="214" width="165" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F82-oX-D1G">
-                                <frame key="frameInset" minX="105" minY="267" width="200" height="30"/>
+                                <frame key="frameInset" minX="105" minY="267" width="165" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -167,7 +148,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMu-HW-CkA">
                                 <frame key="frameInset" minX="105" minY="368" width="200" height="30"/>
@@ -175,6 +156,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="clickTextField:" destination="2CY-Iz-NXj" eventType="editingDidBegin" id="3QH-y7-GfR"/>
+                                    <action selector="endTextFiled:" destination="2CY-Iz-NXj" eventType="editingDidEnd" id="qcK-5B-pGl"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSu-hD-ime">
                                 <frame key="frameInset" minX="105" minY="420" width="200" height="30"/>
@@ -182,6 +167,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="clickTextField:" destination="2CY-Iz-NXj" eventType="editingDidBegin" id="UGl-lg-p2R"/>
+                                    <action selector="endTextFiled:" destination="2CY-Iz-NXj" eventType="editingDidEnd" id="xI4-14-p6o"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6N-hU-G7F" customClass="RadioButton" customModule="fit" customModuleProvider="target">
                                 <frame key="frameInset" minX="89" minY="155" width="86" height="30"/>
@@ -196,6 +185,17 @@
                                 <state key="normal" title=" 사업자">
                                     <color key="titleColor" red="0.96345049140000005" green="0.6333708763" blue="0.64245933290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoP-w6-kY6">
+                                <frame key="frameInset" minX="276" minY="267" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="중복확인">
+                                    <color key="titleColor" red="0.96345049140000005" green="0.6333708763" blue="0.64245933290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkNickname:" destination="2CY-Iz-NXj" eventType="touchUpInside" id="3zl-eY-wSv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -216,8 +216,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="completeButton" width="283" height="45"/>
         <image name="email" width="285" height="46"/>
         <image name="id" width="285" height="46"/>
+        <image name="loginButton" width="277" height="40"/>
         <image name="logo2" width="266" height="294"/>
         <image name="nicname" width="285" height="46"/>
         <image name="pw" width="284" height="46"/>

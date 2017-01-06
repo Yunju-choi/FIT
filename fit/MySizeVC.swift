@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MySizeVC : UIViewController {
+class MySizeVC : UIViewController, NetworkCallback {
     
     var modelHeight = Array<String>()
     var imgModel = Array<String>()
@@ -18,44 +18,112 @@ class MySizeVC : UIViewController {
     @IBOutlet var myHeight: UILabel!
     @IBOutlet var myModel: UIImageView!
     
-    @IBOutlet var topLen: PickerInputLabel!
-    @IBOutlet var bottomLen: PickerInputLabel!
-    @IBOutlet var totalLen: PickerInputLabel!
-    @IBOutlet var armLen: PickerInputLabel!
-    @IBOutlet var shoulderLen: PickerInputLabel!
+    @IBOutlet var mySizeStackView: UIStackView!
+    
+    var topLen: Float!
+    var bottomLen: Float!
+    var totalLen: Float!
+    var armLen: Float!
+    var shoulderLen: Float!
+
     //var height : String!
     //var imageFile : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ud = UserDefaults.standard
         
-        self.imgModel.append(contentsOf: ["female145_guide", "female150_guide", "female155_guide" , "female160_guide" , "female165_guide" , "female170_guide"])
+        setKeyboardSetting()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        self.imgModel.append(contentsOf: ["female145_notify", "female150_notify", "female155_notify" , "female160_notify" , "female165_notify" , "female170_notify"])
         self.modelHeight.append(contentsOf: ["145", "150", "155" , "160" , "165" , "170"])
         
+        ud.set(arrayIndex, forKey: "index")
         self.myModel.image = UIImage(named: imgModel[arrayIndex])
         self.myHeight.text = modelHeight[arrayIndex]
         
-        topLen.initPickerInput(dataSource: ["0","1","2","3","4","5","6","7","8","9"])
-        bottomLen.initPickerInput(dataSource: ["0","1","2","3","4","5","6","7","8","9"])
-        totalLen.initPickerInput(dataSource: ["0","1","2","3","4","5","6","7","8","9"])
-        armLen.initPickerInput(dataSource: ["0","1","2","3","4","5","6","7","8","9"])
-        shoulderLen.initPickerInput(dataSource: ["0","1","2","3","4","5","6","7","8","9"])
+        for view in mySizeStackView.arrangedSubviews {
+            if view.subviews.count > 0 {
+                if let tf = view.subviews[0] as? UITextField {
+                    tf.delegate = self
+                }
+            }
+            
+        }
         
-        topLen.text = size[arrayIndex][0]
-        bottomLen.text = size[arrayIndex][1]
-        totalLen.text = size[arrayIndex][2]
-        armLen.text = size[arrayIndex][3]
-        shoulderLen.text = size[arrayIndex][4]
+        for view in mySizeStackView.arrangedSubviews {
+            if view.subviews.count > 0 {
+                if let tf = view.subviews[0] as? UITextField {
+                    switch tf.tag {
+                    case 0:
+                        tf.text = size[arrayIndex][0]
+                    case 1:
+                        tf.text = size[arrayIndex][1]
+                    case 2:
+                        tf.text = size[arrayIndex][2]
+                    case 3:
+                        tf.text = size[arrayIndex][3]
+                    case 4:
+                        tf.text = size[arrayIndex][4]
+                    default:
+                        break
+                    }
+                }
+            }
+        }
     }
         
     @IBAction func btnCompleteSize(_ sender: AnyObject) {
-        let userDefault = UserDefaults.standard
-        userDefault.set(topLen.text, forKey: "myTopData")
-        userDefault.set(bottomLen.text, forKey: "myBottomData")
-        userDefault.set(totalLen.text, forKey: "myTotalData")
-        userDefault.set(armLen.text, forKey: "myArmData")
-        userDefault.set(shoulderLen.text, forKey: "myShoulderData")
+        let model = UserFitModel(self)
+        
+        for view in mySizeStackView.arrangedSubviews {
+            if view.subviews.count > 0 {
+                if let tf = view.subviews[0] as? UITextField {
+                    switch tf.tag {
+                    case 0:
+                        topLen = gfno(Float(tf.text!))
+                    case 1:
+                        bottomLen = gfno(Float(tf.text!))
+                    case 2:
+                        totalLen = gfno(Float(tf.text!))
+                    case 3:
+                        armLen = gfno(Float(tf.text!))
+                    case 4:
+                        shoulderLen = gfno(Float(tf.text!))
+                    default:
+                        break
+                    }
+                }
+            }
+        }
+        
+        let ufvo = UserFitVO(
+            upper: topLen,
+            lower: bottomLen,
+            shoulder: shoulderLen,
+            arm: armLen,
+            total: totalLen,
+            uid: gsno(UserDefaults.standard.string(forKey: "user_id")))
+        
+        model.searchUserFit(ufvo: ufvo)
+    }
+    
+    func networkResult(resultData: Any, code: Int) {
+        //navigationController?.popToRootViewController(animated: true)
+        //tabBarController.
         simpleAlert(title: "사이즈 측정 완료!", msg: "다음 단계 진행 가능~")
     }
-
 }
+
+extension MySizeVC: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        
+        let newLength = text.utf16.count + string.utf16.count - range.length
+        let limit = 3
+        return newLength <= limit
+    }
+}
+

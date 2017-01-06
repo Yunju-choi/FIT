@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 탭바 색상
         UITabBar.appearance().tintColor = UIColor(hex: 0xFF6671, alpha: 1.0)
         
+        
+        
         return true
     }
     

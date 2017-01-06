@@ -15,6 +15,8 @@ class SelectModelVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
     @IBAction func clickFemaleButton(_ sender: AnyObject) {

@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B103D4D1E18E4A200504B4D /* PickerInputLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B103D4C1E18E4A200504B4D /* PickerInputLabel.swift */; };
-		6B103D4F1E18E4D800504B4D /* SimplePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B103D4E1E18E4D800504B4D /* SimplePickerView.swift */; };
 		6B1A2A691E152B0E00415CCF /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A2A681E152B0E00415CCF /* NetworkModel.swift */; };
 		6B1A2A6B1E152B3100415CCF /* NetworkCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A2A6A1E152B3100415CCF /* NetworkCallback.swift */; };
 		6B1A2A6D1E15334400415CCF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A2A6C1E15334400415CCF /* UserModel.swift */; };
+		6B41361C1E1F93F600C54F75 /* topFitVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B41361B1E1F93F600C54F75 /* topFitVO.swift */; };
+		6B41361E1E1F940400C54F75 /* bottomFitVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B41361D1E1F940400C54F75 /* bottomFitVO.swift */; };
+		6B4136201E1F941500C54F75 /* oneFitVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B41361F1E1F941500C54F75 /* oneFitVO.swift */; };
+		6B4136221E1F95C000C54F75 /* SaveFitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4136211E1F95C000C54F75 /* SaveFitModel.swift */; };
+		6B5AEC141E1FE75600BF54AA /* SaveDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5AEC131E1FE75600BF54AA /* SaveDetailVC.swift */; };
+		6B6BAE9C1E1D33CB008F422A /* UserFitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BAE9B1E1D33CB008F422A /* UserFitModel.swift */; };
+		6B6BAE9E1E1D33D7008F422A /* UserFitVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BAE9D1E1D33D7008F422A /* UserFitVO.swift */; };
+		6B6BAEA01E1D33E8008F422A /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6BAE9F1E1D33E8008F422A /* SessionModel.swift */; };
 		6B7BC35D1E12819D0005D059 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BC35C1E12819D0005D059 /* ToggleButton.swift */; };
 		6B7BC35F1E1281B20005D059 /* ToggleImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BC35E1E1281B20005D059 /* ToggleImageButton.swift */; };
 		6B7BC3631E12A2BF0005D059 /* SelectFemaleModelPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BC3621E12A2BF0005D059 /* SelectFemaleModelPVC.swift */; };
@@ -35,6 +41,7 @@
 		6BDC69841E1AD689001C0676 /* SaveOneCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC69831E1AD689001C0676 /* SaveOneCVC.swift */; };
 		6BE4322F1E150AEE00DC3E29 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4322E1E150AEE00DC3E29 /* Login.storyboard */; };
 		6BE432311E150E2400DC3E29 /* ExtensionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE432301E150E2400DC3E29 /* ExtensionControl.swift */; };
+		6BEC29881E1E3BB500B90913 /* MatchingFitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC29871E1E3BB500B90913 /* MatchingFitVC.swift */; };
 		6BF0238F1E126E9900A5107B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0238E1E126E9900A5107B /* AppDelegate.swift */; };
 		6BF023941E126E9900A5107B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF023921E126E9900A5107B /* Main.storyboard */; };
 		6BF023961E126E9900A5107B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF023951E126E9900A5107B /* Assets.xcassets */; };
@@ -49,11 +56,17 @@
 
 /* Begin PBXFileReference section */
 		66E3A8C8AD99E9E6E1C0BEB4 /* Pods-fit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit.release.xcconfig"; path = "Pods/Target Support Files/Pods-fit/Pods-fit.release.xcconfig"; sourceTree = "<group>"; };
-		6B103D4C1E18E4A200504B4D /* PickerInputLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerInputLabel.swift; sourceTree = "<group>"; };
-		6B103D4E1E18E4D800504B4D /* SimplePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePickerView.swift; sourceTree = "<group>"; };
 		6B1A2A681E152B0E00415CCF /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		6B1A2A6A1E152B3100415CCF /* NetworkCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCallback.swift; sourceTree = "<group>"; };
 		6B1A2A6C1E15334400415CCF /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		6B41361B1E1F93F600C54F75 /* topFitVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topFitVO.swift; sourceTree = "<group>"; };
+		6B41361D1E1F940400C54F75 /* bottomFitVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bottomFitVO.swift; sourceTree = "<group>"; };
+		6B41361F1E1F941500C54F75 /* oneFitVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oneFitVO.swift; sourceTree = "<group>"; };
+		6B4136211E1F95C000C54F75 /* SaveFitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveFitModel.swift; sourceTree = "<group>"; };
+		6B5AEC131E1FE75600BF54AA /* SaveDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveDetailVC.swift; sourceTree = "<group>"; };
+		6B6BAE9B1E1D33CB008F422A /* UserFitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFitModel.swift; sourceTree = "<group>"; };
+		6B6BAE9D1E1D33D7008F422A /* UserFitVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFitVO.swift; sourceTree = "<group>"; };
+		6B6BAE9F1E1D33E8008F422A /* SessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		6B7BC35C1E12819D0005D059 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		6B7BC35E1E1281B20005D059 /* ToggleImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleImageButton.swift; sourceTree = "<group>"; };
 		6B7BC3621E12A2BF0005D059 /* SelectFemaleModelPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFemaleModelPVC.swift; sourceTree = "<group>"; };
@@ -79,6 +92,7 @@
 		6BDC69831E1AD689001C0676 /* SaveOneCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveOneCVC.swift; sourceTree = "<group>"; };
 		6BE4322E1E150AEE00DC3E29 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6BE432301E150E2400DC3E29 /* ExtensionControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionControl.swift; sourceTree = "<group>"; };
+		6BEC29871E1E3BB500B90913 /* MatchingFitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingFitVC.swift; sourceTree = "<group>"; };
 		6BF0238B1E126E9900A5107B /* fit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF0238E1E126E9900A5107B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BF023931E126E9900A5107B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,15 +153,16 @@
 		6B7BC3541E127B980005D059 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6B7BC3621E12A2BF0005D059 /* SelectFemaleModelPVC.swift */,
-				6B7BC3641E12A4830005D059 /* ContentModelVC.swift */,
 				6BF1CE481E1513D1009DE460 /* LoginVC.swift */,
 				6BF1CE4A1E1513D8009DE460 /* JoinVC.swift */,
 				6BD3F4721E1546BD000456FC /* SelectModelVC.swift */,
-				6BD3F4761E1548C4000456FC /* FitVC.swift */,
+				6B7BC3621E12A2BF0005D059 /* SelectFemaleModelPVC.swift */,
+				6B7BC3641E12A4830005D059 /* ContentModelVC.swift */,
 				6BB9DB3A1E17F739004D0131 /* MySizeVC.swift */,
-				6BB47D801E183A5D000801D6 /* FitMoreVC.swift */,
+				6BD3F4761E1548C4000456FC /* FitVC.swift */,
 				6BB47D821E185769000801D6 /* SelectClothVC.swift */,
+				6BEC29871E1E3BB500B90913 /* MatchingFitVC.swift */,
+				6BB47D801E183A5D000801D6 /* FitMoreVC.swift */,
 				6BDC697B1E1AD621001C0676 /* MyPageVC.swift */,
 				6BDC697D1E1AD63F001C0676 /* SaveFitVC.swift */,
 				6BDC697F1E1AD659001C0676 /* SaveTopCVC.swift */,
@@ -156,6 +171,7 @@
 				6B8A5AD61E1AEC780095C22A /* SaveTopCell.swift */,
 				6B8A5AD81E1AEC980095C22A /* SaveBottomCell.swift */,
 				6B8A5ADA1E1AECA20095C22A /* SaveOneCell.swift */,
+				6B5AEC131E1FE75600BF54AA /* SaveDetailVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -188,8 +204,6 @@
 				6B7BC35E1E1281B20005D059 /* ToggleImageButton.swift */,
 				6BA30FA91E17068F00FA4ACE /* RadioButton.swift */,
 				6BA30FAB1E1706C500FA4ACE /* RadioButtonsController.swift */,
-				6B103D4C1E18E4A200504B4D /* PickerInputLabel.swift */,
-				6B103D4E1E18E4D800504B4D /* SimplePickerView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -206,9 +220,12 @@
 		6B7BC35B1E127C240005D059 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				6B6BAE9F1E1D33E8008F422A /* SessionModel.swift */,
+				6B6BAE9B1E1D33CB008F422A /* UserFitModel.swift */,
 				6B1A2A681E152B0E00415CCF /* NetworkModel.swift */,
 				6B1A2A6C1E15334400415CCF /* UserModel.swift */,
 				6BA30FAD1E177C8300FA4ACE /* LoginModel.swift */,
+				6B4136211E1F95C000C54F75 /* SaveFitModel.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -248,6 +265,10 @@
 			isa = PBXGroup;
 			children = (
 				798934FD1E1D00700089C055 /* MyFitVO.swift */,
+				6B6BAE9D1E1D33D7008F422A /* UserFitVO.swift */,
+				6B41361B1E1F93F600C54F75 /* topFitVO.swift */,
+				6B41361D1E1F940400C54F75 /* bottomFitVO.swift */,
+				6B41361F1E1F941500C54F75 /* oneFitVO.swift */,
 			);
 			name = ValueObject;
 			sourceTree = "<group>";
@@ -296,7 +317,7 @@
 				TargetAttributes = {
 					6BF0238A1E126E9900A5107B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = RFXGE2J65W;
+						DevelopmentTeam = 3Y29DL4N9Y;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -394,13 +415,14 @@
 				6BA30FAE1E177C8300FA4ACE /* LoginModel.swift in Sources */,
 				6B1A2A691E152B0E00415CCF /* NetworkModel.swift in Sources */,
 				6B7BC3651E12A4830005D059 /* ContentModelVC.swift in Sources */,
-				6B103D4D1E18E4A200504B4D /* PickerInputLabel.swift in Sources */,
-				6B103D4F1E18E4D800504B4D /* SimplePickerView.swift in Sources */,
 				6BD3F4771E1548C4000456FC /* FitVC.swift in Sources */,
 				6B1A2A6B1E152B3100415CCF /* NetworkCallback.swift in Sources */,
 				6BF1CE4B1E1513D8009DE460 /* JoinVC.swift in Sources */,
+				6B41361C1E1F93F600C54F75 /* topFitVO.swift in Sources */,
 				6B7BC35D1E12819D0005D059 /* ToggleButton.swift in Sources */,
+				6B4136201E1F941500C54F75 /* oneFitVO.swift in Sources */,
 				6BB9DB3B1E17F739004D0131 /* MySizeVC.swift in Sources */,
+				6B5AEC141E1FE75600BF54AA /* SaveDetailVC.swift in Sources */,
 				6B1A2A6D1E15334400415CCF /* UserModel.swift in Sources */,
 				6BDC69801E1AD659001C0676 /* SaveTopCVC.swift in Sources */,
 				6B8A5AD71E1AEC790095C22A /* SaveTopCell.swift in Sources */,
@@ -408,7 +430,9 @@
 				798934FE1E1D00700089C055 /* MyFitVO.swift in Sources */,
 				6BA30FAC1E1706C500FA4ACE /* RadioButtonsController.swift in Sources */,
 				6BDC697C1E1AD621001C0676 /* MyPageVC.swift in Sources */,
+				6B6BAE9E1E1D33D7008F422A /* UserFitVO.swift in Sources */,
 				6BF1CE491E1513D1009DE460 /* LoginVC.swift in Sources */,
+				6B6BAEA01E1D33E8008F422A /* SessionModel.swift in Sources */,
 				6B8A5AD91E1AEC980095C22A /* SaveBottomCell.swift in Sources */,
 				6BA30FAA1E17068F00FA4ACE /* RadioButton.swift in Sources */,
 				6BD3F4731E1546BD000456FC /* SelectModelVC.swift in Sources */,
@@ -416,9 +440,13 @@
 				6BF0238F1E126E9900A5107B /* AppDelegate.swift in Sources */,
 				6B7BC35F1E1281B20005D059 /* ToggleImageButton.swift in Sources */,
 				6BB47D811E183A5D000801D6 /* FitMoreVC.swift in Sources */,
+				6B6BAE9C1E1D33CB008F422A /* UserFitModel.swift in Sources */,
 				6B7BC3631E12A2BF0005D059 /* SelectFemaleModelPVC.swift in Sources */,
+				6BEC29881E1E3BB500B90913 /* MatchingFitVC.swift in Sources */,
+				6B4136221E1F95C000C54F75 /* SaveFitModel.swift in Sources */,
 				6BF1CE451E1512E0009DE460 /* CustomRoundedLabel.swift in Sources */,
 				6BDC69841E1AD689001C0676 /* SaveOneCVC.swift in Sources */,
+				6B41361E1E1F940400C54F75 /* bottomFitVO.swift in Sources */,
 				6B8A5ADB1E1AECA20095C22A /* SaveOneCell.swift in Sources */,
 				6BDC69821E1AD66F001C0676 /* SaveBottomCVC.swift in Sources */,
 				6BDC697E1E1AD63F001C0676 /* SaveFitVC.swift in Sources */,
@@ -545,7 +573,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fit/fit.entitlements;
-				DEVELOPMENT_TEAM = RFXGE2J65W;
+				DEVELOPMENT_TEAM = 3Y29DL4N9Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -591,7 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fit/fit.entitlements;
-				DEVELOPMENT_TEAM = RFXGE2J65W;
+				DEVELOPMENT_TEAM = 3Y29DL4N9Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -10,6 +10,31 @@ import UIKit
 
 class ToggleImageButton : ToggleButton{
     
+    static let TOPBUTTON_CHECKED = "topButton_check"
+    static let TOPBUTTON = "topButton"
+    static let BOTTOMBUTTON_CHECKED = "bottomButton_check"
+    static let BOTTOMBUTTON = "bottomButton"
+    static let DANBULBUTTON_CHECKED = "danbulButton_check"
+    static let DANBULBUTTON = "danbulButton"
+    
+    internal var trueImg : UIImage?
+    internal var falseImg: UIImage?
+    
+    func setToggleImages(_ trueImgName: String?, falseImgName: String?) {
+        trueImg = UIImage(named: trueImgName!)
+        falseImg = UIImage(named: falseImgName!)
+    }
+    
+    override func setButtonChecked(_ check: Bool) {
+        if check {
+            self.setImage(trueImg, for: UIControlState())
+            self.checked = true
+        } else {
+            self.setImage(falseImg, for: UIControlState())
+            self.checked = false
+        }
+    }
+    /*
     var checkImg = false
     
     var unselectedImg = UIImage(named: "femaleButton")
@@ -29,4 +54,5 @@ class ToggleImageButton : ToggleButton{
             checkImg = true
         }
     }
+    */
 }
